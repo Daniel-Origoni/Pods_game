@@ -1,3 +1,6 @@
+All the functions used by the environment are located in the functions file, in the resources folder.
+All the global variables are located in the settings file, in the resources folder.
+
 When a new object is created, the default arguments will be number of human players 1, number of bots 1, infinite laps, 6 frames per second, and render_mode None:
 
     Number of players and number of bots can be any int, minimum of 1
