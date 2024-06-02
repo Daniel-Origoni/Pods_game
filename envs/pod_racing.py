@@ -1,9 +1,9 @@
-from envs.resources import *
-
 import pygame
 import numpy as np
 import math
 import sys
+
+from envs.resources import *
 
 class RaceTrackEnv():
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 6}
@@ -90,7 +90,7 @@ class RaceTrackEnv():
                 reward = -1
 
                 if last_distance > checkDistance(*pod.get_pos(), *self.checkpoints[pod.target]):
-                    reward = (last_distance - checkDistance(*pod.get_pos(), *self.checkpoints[pod.target]))/(185)*10
+                    reward = (last_distance - checkDistance(*pod.get_pos(), *self.checkpoints[pod.target]))/(185)
 
                 if pod.checked == 1:
                     reward = 100
